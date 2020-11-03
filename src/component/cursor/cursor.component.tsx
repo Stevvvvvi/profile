@@ -35,7 +35,7 @@ const Cursor=()=>{
         }
         window.addEventListener('mousemove',handleMove)
         //return window.removeEventListener('mousemove',handleMove)
-    })
+    },[])
     return (
         <div className='main-cursor'ref={mainCursor}></div>
     )
