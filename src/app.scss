@@ -1,0 +1,21 @@
+a {
+    text-decoration: none;
+    color:black;
+  }
+  
+  * {
+    box-sizing: border-box;
+    /* cursor: none; */
+  }
+.home{
+    .overlay{
+        h1{
+            &:hover ~ .main-cursor{
+                transform: scale(6);
+              }
+        }
+    }
+}  
+body{
+    min-height: 160vh;
+}
