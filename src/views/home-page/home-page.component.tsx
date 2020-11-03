@@ -6,66 +6,6 @@ const HomePage=()=>{
     return (
         <>
             <Home />
-            <div>
-                asdfasdfasdfasdf
-                asdfasdfasdfasdfasdfas
-                asdfasdfasdfasdfasdfas
-                asdfasdfasdfasdfasdfas
-                asdfasdfasdfasdfasdfas
-                asdfasdfasdfasdfasdfas
-                sdferewr
-
-            </div>
-            <div>
-                asdfasdfasdfasdf
-                asdfasdfasdfasdfasdfas
-                asdfasdfasdfasdfasdfas
-                asdfasdfasdfasdfasdfas
-                asdfasdfasdfasdfasdfas
-                asdfasdfasdfasdfasdfas
-                sdferewr
-                
-            </div>
-            <div>
-                asdfasdfasdfasdf
-                asdfasdfasdfasdfasdfas
-                asdfasdfasdfasdfasdfas
-                asdfasdfasdfasdfasdfas
-                asdfasdfasdfasdfasdfas
-                asdfasdfasdfasdfasdfas
-                sdferewr
-                
-            </div>
-            <div>
-                asdfasdfasdfasdf
-                asdfasdfasdfasdfasdfas
-                asdfasdfasdfasdfasdfas
-                asdfasdfasdfasdfasdfas
-                asdfasdfasdfasdfasdfas
-                asdfasdfasdfasdfasdfas
-                sdferewr
-                
-            </div>
-            <div>
-                asdfasdfasdfasdf
-                asdfasdfasdfasdfasdfas
-                asdfasdfasdfasdfasdfas
-                asdfasdfasdfasdfasdfas
-                asdfasdfasdfasdfasdfas
-                asdfasdfasdfasdfasdfas
-                sdferewr
-                
-            </div>
-            <div>
-                asdfasdfasdfasdf
-                asdfasdfasdfasdfasdfas
-                asdfasdfasdfasdfasdfas
-                asdfasdfasdfasdfasdfas
-                asdfasdfasdfasdfasdfas
-                asdfasdfasdfasdfasdfas
-                sdferewr
-                
-            </div>
         </>
     )
 }

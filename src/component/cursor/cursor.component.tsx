@@ -24,15 +24,17 @@ const Cursor=()=>{
 
     //     })
     // })
+    
     useEffect(()=>{
-        document.addEventListener('mousemove',(event)=>{
+        const handleMove=(e:MouseEvent)=>{
             if (mainCursor && mainCursor.current && mainCursor.current.style){
-                mainCursor.current.style.left=event.pageX+'px';
-                mainCursor.current.style.top=event.pageY+'px';
+                    mainCursor.current.style.left=e.pageX+'px';
+                    const yPosition=e.pageY-window.pageYOffset;
+                    mainCursor.current.style.top=yPosition+'px';
             }
-            
-
-        })
+        }
+        window.addEventListener('mousemove',handleMove)
+        //return window.removeEventListener('mousemove',handleMove)
     })
     return (
         <div className='main-cursor'ref={mainCursor}></div>
