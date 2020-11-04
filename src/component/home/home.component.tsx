@@ -2,15 +2,24 @@ import React, { useEffect, useRef, useState } from 'react';
 
 import './home.styles.scss';
 import profile from '../../assets/profile-removebg.png'
+import { connect } from 'react-redux';
+import { rootState } from '../../redux/root-reducer';
+import { setScrollYOffset } from '../../redux/position/position.action';
+import { selectCurrentPosition } from '../../redux/position/position.select';
+import { createStructuredSelector } from 'reselect';
 
-const Home=()=>{
+interface props extends stateProps{
+
+    setOffsetY:typeof setScrollYOffset;
+}
+const Home=({offsetY,setOffsetY}:props)=>{
     // const person=useRef<HTMLImageElement>(null);
-    const [offsetY,setOffsetY]=useState(0);
+    //const [offsetY,setOffsetY]=useState(0);
     const handleScroll=()=>setOffsetY(window.pageYOffset);
     useEffect(()=>{
         window.addEventListener('scroll',handleScroll);
         return ()=>window.removeEventListener("scroll",handleScroll);
-    })
+    },[])
     
 
     return <div className='home'>
@@ -22,4 +31,16 @@ const Home=()=>{
         
     </div>
 }
-export default Home;
+// const mapStateToProps=(state:rootState)=>({
+//     offsetY:selectCurrentPosition(state)
+// })
+interface stateProps{
+    offsetY:number;
+}
+const mapStateToProps=createStructuredSelector<rootState,stateProps>({
+    offsetY:selectCurrentPosition
+})
+const mapDispatchToProps=(dispatch: (arg0: { type: string; payload: number; }) => any)=>({
+    setOffsetY:(pageYoffset:number)=>dispatch(setScrollYOffset(pageYoffset))
+})
+export default connect(mapStateToProps,mapDispatchToProps)(Home);
