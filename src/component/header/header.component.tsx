@@ -8,8 +8,10 @@ import './header.styles.scss';
 import { connect } from 'react-redux';
 import { rootState } from '../../redux/root-reducer';
 import { setToggleMenu } from '../../redux/menu/menu.action';
-interface props{
-    isOpen:boolean,
+import { createStructuredSelector } from 'reselect';
+import { selectCurrentOpen } from '../../redux/menu/menu.select';
+interface props extends stateProps{
+
     setIsOpen:typeof setToggleMenu
 }
 const Header=({isOpen,setIsOpen}:props)=>{
@@ -45,8 +47,14 @@ const Header=({isOpen,setIsOpen}:props)=>{
         </div>
     )
 }
-const mapStateToProps=({menu:{isOpen}}:rootState)=>({
-    isOpen:isOpen
+// const mapStateToProps=({menu:{isOpen}}:rootState)=>({
+//     isOpen:isOpen
+// })
+interface stateProps{
+    isOpen:boolean,
+}
+const mapStateToProps=createStructuredSelector<rootState,stateProps>({
+    isOpen:selectCurrentOpen
 })
 const mapDispatchToProps=(dispatch: (arg0: { type: string; }) => any)=>({
     setIsOpen:()=>dispatch(setToggleMenu())
