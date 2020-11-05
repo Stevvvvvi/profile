@@ -9,7 +9,7 @@ import HomePage from './views/home-page/home-page.component';
 
 function App() {
   let config = {
-    num: [3, 5],
+    num: [2, 5],
     rps: 0.1,
     radius: [5, 40],
     life: [1.5, 3],
@@ -21,7 +21,7 @@ function App() {
     scale: [1, 0.1],
     position: "all", // all or center or {x:1,y:1,width:100,height:100}
     color: ["random", "#ff0000"],
-    cross: "bround", // cross or bround
+    cross: "cross", // cross or bround
     random: 15,  // or null,
     g: 2,    // gravity
     // f: [2, -1], // force
