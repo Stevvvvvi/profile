@@ -21,8 +21,8 @@ const Header=({isOpen,setIsOpen}:props)=>{
     }
     const menuItems=(
         <div className='menubar'ref={menubar}>
-            <HashLink className='option' to='/project' onClick={handleMenuClick}><BarChartLineFill className='header-icon'/>Projects</HashLink>
             <HashLink className='option' to='/about/#aboutme' onClick={handleMenuClick}>About</HashLink>
+            <HashLink className='option' to='/project' onClick={handleMenuClick}><BarChartLineFill className='header-icon'/>Projects</HashLink>
             <a className='option' href="/resume2.pdf" download onClick={handleMenuClick}><ArchiveFill className='header-icon'/>Resume</a>
         </div>
     )

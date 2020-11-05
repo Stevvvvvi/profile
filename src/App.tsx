@@ -13,8 +13,8 @@ function App() {
 
       {/* <Switch> */}
         <Route path='/' component={HomePage}/>
-        <Route path='/project' />
         <Route path='/about' component={About}/>
+        <Route path='/project' />
         <Route path='' />
       {/* </Switch> */}
       <Cursor />
