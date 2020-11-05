@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import './app.scss';
+import About from './component/about/about.component';
 import Cursor from './component/cursor/cursor.component';
 import Header from './component/header/header.component';
 import HomePage from './views/home-page/home-page.component';
@@ -10,12 +11,12 @@ function App() {
     <div className="App">
       <Header />
 
-      <Switch>
-        <Route exact path='/' component={HomePage}/>
-        <Route exact path='project' />
-        <Route exact path='about' />
+      {/* <Switch> */}
+        <Route path='/' component={HomePage}/>
+        <Route path='/project' />
+        <Route path='/about' component={About}/>
         <Route path='' />
-      </Switch>
+      {/* </Switch> */}
       <Cursor />
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />

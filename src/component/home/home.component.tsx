@@ -22,7 +22,7 @@ const Home=({offsetY,setOffsetY}:props)=>{
     },[])
     
 
-    return <div className='home'>
+    return <div className='home' id="home">
         <div className='overlay'>
             <h1 style={{transform:`translateX(-${offsetY*0.2}px)`, opacity:`${1-offsetY/300}`}}>AWS Certified Software Developer</h1>
         </div>

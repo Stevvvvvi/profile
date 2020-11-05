@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { ArchiveFill, BarChartLineFill } from 'react-bootstrap-icons';
-import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import Hamburger from 'hamburger-react';
 
 
@@ -21,8 +21,8 @@ const Header=({isOpen,setIsOpen}:props)=>{
     }
     const menuItems=(
         <div className='menubar'ref={menubar}>
-            <Link className='option' to='project' onClick={handleMenuClick}><BarChartLineFill className='header-icon'/>Projects</Link>
-            <Link className='option' to='about' onClick={handleMenuClick}>About</Link>
+            <HashLink className='option' to='/project' onClick={handleMenuClick}><BarChartLineFill className='header-icon'/>Projects</HashLink>
+            <HashLink className='option' to='/about/#aboutme' onClick={handleMenuClick}>About</HashLink>
             <a className='option' href="/resume2.pdf" download onClick={handleMenuClick}><ArchiveFill className='header-icon'/>Resume</a>
         </div>
     )
@@ -35,7 +35,7 @@ const Header=({isOpen,setIsOpen}:props)=>{
     },[isOpen])
     return (
         <div className='header'>
-            <Link className="logo" to='/'><h2>STEVE LI</h2></Link>
+            <HashLink className="logo" to='/#home'><h2>STEVE LI</h2></HashLink>
             <div className='options'>
                 {menuItems}
                 <div className='option hamburger'>
