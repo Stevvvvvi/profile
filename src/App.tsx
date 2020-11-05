@@ -11,12 +11,12 @@ function App() {
     <div className="App">
       <Header />
 
-      {/* <Switch> */}
-        <Route path='/' component={HomePage}/>
+      <Switch>
+        <Route exact path='/' component={HomePage}/>
         <Route path='/about' component={About}/>
         <Route path='/project' />
         <Route path='' />
-      {/* </Switch> */}
+      </Switch>
       <Cursor />
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
