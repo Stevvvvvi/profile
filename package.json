@@ -16,6 +16,7 @@
     "@types/redux-logger": "^3.0.8",
     "hamburger-react": "^2.3.0",
     "node-sass": "4.14.1",
+    "particles-bg": "^2.5.0",
     "react": "^17.0.1",
     "react-bootstrap-icons": "^1.1.0",
     "react-dom": "^17.0.1",

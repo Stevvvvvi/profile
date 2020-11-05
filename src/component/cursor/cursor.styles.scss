@@ -1,11 +1,43 @@
 $breakpoint-tablet: 768px;
 .main-cursor{
     position: fixed;
-    width:10px;
-    height:10px;
+    width:15px;
+    height:15px;
     border-radius: 50%;
-    background: black;
+    background: white;
     transition: 0.1s;
+    transform: translate(-50%,-50%);
+    filter:blur(3px);
+    pointer-events: none;
+    @media (max-width: $breakpoint-tablet) {
+        display: none;
+    }
+    //box-shadow: 0 0 5px black;
+    //mix-blend-mode: difference;
+}
+.sec-cursor{
+    position: fixed;
+    width:15px;
+    height:15px;
+    border-radius: 50%;
+    background: white;
+    transition: 0.2s;
+    transform: translate(-50%,-50%);
+    filter:blur(3px);
+    pointer-events: none;
+    @media (max-width: $breakpoint-tablet) {
+        display: none;
+    }
+    //box-shadow: 0 0 5px black;
+    //mix-blend-mode: difference;
+}
+.tir-cursor{
+    position: fixed;
+    width:15px;
+    height:15px;
+    border-radius: 50%;
+    background: white;
+    transition: 0.4s;
     transform: translate(-50%,-50%);
     filter:blur(3px);
     pointer-events: none;
