@@ -53,6 +53,7 @@ $breakpoint-tablet: 768px;
                 display:none;
                 @media (max-width:$breakpoint-tablet){
                     display: block;
+                    color:white;
                 }
             }
             
