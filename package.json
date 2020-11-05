@@ -13,6 +13,7 @@
     "@types/react-redux": "^7.1.11",
     "@types/react-router-dom": "^5.1.6",
     "@types/redux-logger": "^3.0.8",
+    "hamburger-react": "^2.3.0",
     "node-sass": "4.14.1",
     "react": "^17.0.1",
     "react-bootstrap-icons": "^1.1.0",

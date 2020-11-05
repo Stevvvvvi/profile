@@ -1,9 +1,10 @@
+$breakpoint-tablet: 768px;
 .header{
     background: linear-gradient(180deg, rgba(0,0,0,0.4) 0%, transparent 100%);
     width: 100%;
     display: flex;
     justify-content: space-between;
-    z-index: 100;
+    z-index: 1000;
     position: absolute;
     top:0;
     .logo{
@@ -18,7 +19,11 @@
             0 0 20px white,
             0 0 40px white,;
             transform:translate(-0.7em,-0.7em) scale(1.2);
-        }
+        }   
+    }
+    @media (max-width: $breakpoint-tablet){
+        position: fixed;
+        top:0
     }
     .options{
         display: flex;
@@ -31,21 +36,51 @@
             line-height: 0.1em;
             outline:none;
             //animation: animate 5s linear infinite;
-            &:hover{
-                -webkit-box-reflect: below -5px linear-gradient(transparent,black);
-                color: white;
-                text-shadow: 0 0 5px #ffb7ae,
-                    0 0 10px #ffb7ae,
-                    0 0 20px #ffb7ae,
-                    0 0 40px #ffb7ae,
-                    0 0 80px #ffb7ae,
-                    0 0 160px #ffb7ae,;
-                    
+            @media (min-width: $breakpoint-tablet){
+                &:hover{
+                    -webkit-box-reflect: below -5px linear-gradient(transparent,black);
+                    color: white;
+                    text-shadow: 0 0 5px #ffb7ae,
+                        0 0 10px #ffb7ae,
+                        0 0 20px #ffb7ae,
+                        0 0 40px #ffb7ae,
+                        0 0 80px #ffb7ae,
+                        0 0 160px #ffb7ae,;
+                        
+                }
             }
+            &.hamburger{
+                display:none;
+                @media (max-width:$breakpoint-tablet){
+                    display: block;
+                }
+            }
+            
             .header-icon{
                 margin-right: 5px;
             }
             
+        }
+        .menubar{
+            @media (max-width:$breakpoint-tablet){
+                display: flex;
+                flex-direction: column;
+                position: fixed;
+                background: lightblue;
+                width:100%;
+                bottom:0;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                overflow: auto;
+                z-index:-1;
+                font-size: 2em;
+                transition: left 0.5s;
+                left:-100%;
+                .option{
+                    padding:5vh 3.5vw;
+                }
+            }
         }
     }
     
