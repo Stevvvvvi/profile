@@ -1,3 +1,4 @@
+$breakpoint-tablet: 768px;
 .home{
     width: 100%;
     height: 100vh;
@@ -9,14 +10,26 @@
     position: relative;
     overflow: hidden;
     background-attachment: fixed;
-    clip-path: circle(190vh at 62% -90vh);
+    clip-path: circle(190vh at 60% -90vh);
+    @media (max-width:$breakpoint-tablet){
+        &:before{
+            content:'';
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-color: black;
+            opacity: 0.4;
+        }
+    }
     .overlay{
         padding-top: 40vh;
-        padding-left: 3vw;
+        padding-left: 6vw;
+        z-index: 10;
         h1{
             color:white;
             -webkit-text-stroke: 2px black;
             animation: headerSlide 0.6s;
+            z-index: 10;
         }
     }
     .person{
@@ -27,6 +40,7 @@
         height: 80%;
         width:auto;
         animation:slideIn 0.6s forwards;
+        z-index: -1;
         
     }
 }
