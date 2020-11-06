@@ -33,7 +33,7 @@ const projectsData=[
         id:4,
         name:"Wine of the Bean",
         img:wob1,
-        description:"Front Backend Deploy",
+        description:"Front Backend Deployment",
         website:'https://www.wineofthebean.com.au/',
     },
     
