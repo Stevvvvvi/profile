@@ -6,6 +6,7 @@ import About from './component/about/about.component';
 import Cursor from './component/cursor/cursor.component';
 import Header from './component/header/header.component';
 import HomePage from './views/home-page/home-page.component';
+import Projects from './views/projects/projects-page.component';
 
 function App() {
   let config = {
@@ -40,7 +41,7 @@ function App() {
       <Switch>
         <Route exact path='/' component={HomePage}/>
         <Route path='/about' component={About}/>
-        <Route path='/project' />
+        <Route path='/project' component={Projects} />
         <Route path='' />
       </Switch>
       <Cursor />
