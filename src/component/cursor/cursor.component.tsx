@@ -4,6 +4,8 @@ import './cursor.styles.scss';
 
 const Cursor=()=>{
     const mainCursor=useRef<HTMLDivElement>(null);
+    const secCursor=useRef<HTMLDivElement>(null);
+    const tirCursor=useRef<HTMLDivElement>(null);
     // const secondaryCursor=useRef(null);
     // const positionRef=useRef({
     //     mouseX:0,
@@ -32,12 +34,26 @@ const Cursor=()=>{
                     const yPosition=e.pageY-window.pageYOffset;
                     mainCursor.current.style.top=yPosition+'px';
             }
+            // if (secCursor && secCursor.current && secCursor.current.style){
+            //     secCursor.current.style.left=e.pageX+'px';
+            //     const yPosition=e.pageY-window.pageYOffset;
+            //     secCursor.current.style.top=yPosition+'px';
+            // }   
+            // if (tirCursor && tirCursor.current && tirCursor.current.style){
+            //     tirCursor.current.style.left=e.pageX+'px';
+            //     const yPosition=e.pageY-window.pageYOffset;
+            //     tirCursor.current.style.top=yPosition+'px';
+            // }   
         }
         window.addEventListener('mousemove',handleMove)
         //return window.removeEventListener('mousemove',handleMove)
     },[])
-    return (
+    return (<div>
         <div className='main-cursor'ref={mainCursor}></div>
+        {/* <div className='sec-cursor'ref={secCursor}></div> */}
+        {/* <div className='tir-cursor'ref={tirCursor}></div> */}
+    </div>
+        
     )
 }
 export default Cursor;

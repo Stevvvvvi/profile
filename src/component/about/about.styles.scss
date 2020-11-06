@@ -2,10 +2,12 @@ $breakpoint-tablet: 768px;
 .aboutme{
     padding:60px 15vw;
     @media (max-width:$breakpoint-tablet) {
-        padding:40px 5vw;
+        padding:45px 8vw;
     }
     .description{
-        padding:20px 5vw;
+        padding:10px 2vw;
+        border-radius: 30px;
+        background: blanchedalmond;
         p {
             padding:10px 0;
         }

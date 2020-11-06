@@ -1,0 +1,54 @@
+.project-box{
+    position: relative;
+    cursor: pointer;
+    margin:47px 4vw;
+    //background: coral;
+    transform-style: preserve-3d;
+
+    .img-box{
+
+        img{
+            height: auto;
+            width: 100%;
+            
+        }
+    }
+    &:hover .description .description2{
+        transform:translateZ(70px) scaleY(1)
+    }
+    &:hover {
+        box-shadow: 0 50px 80px rgba(0,0,0,0.1);
+    }
+    .description{
+        position: absolute;
+        top:50%;
+        left: 50%;
+        width:60%;
+        z-index: 10;
+        height: 50%;
+        transform-style: preserve-3d;
+        .description2{
+            position: relative;
+            left:-50%;
+            background: cornsilk;
+            padding:3vw;
+            width:100%;
+            border-radius: 5px;
+            transform: translateZ(20px) scaleY(0);
+            overflow: auto;
+            display: inline-block;
+            max-height: 130%;
+            transform-origin: top;
+            transition: 0.5s;
+            transform-style: preserve-3d;
+            h3{
+                margin-top: 0;
+            }
+
+            p{
+                width:100%;
+                word-wrap: break-word;
+            }
+        }
+    }
+}
