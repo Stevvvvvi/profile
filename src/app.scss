@@ -3,10 +3,10 @@ a {
     color:black;
   }
   
-  * {
-    box-sizing: border-box;
-    /* cursor: none; */
-  }
+* {
+  box-sizing: border-box;
+  /* cursor: none; */
+}
 .home{
     .overlay{
         h1{
@@ -16,6 +16,7 @@ a {
         }
     }
 }  
-// body{
-//     //min-height: 160vh;
-// }
+body{
+    //min-height: 160vh;
+    background: whitesmoke;
+}

@@ -1,0 +1,22 @@
+$breakpoint-tablet: 768px;
+.projects-container{
+    display: grid;
+    grid-template-columns: auto auto;
+    //flex-direction: column;
+    justify-content: center;
+    //flex-wrap: wrap;
+    align-items: center;
+    min-height: 50vh;
+    width: 100%;
+    position: relative;
+    padding: 20px 3vw;
+    padding-top: 80px;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    //background: rgb(255, 244, 223);
+    //margin:5vw;
+    font-size: 80%;
+    @media(max-width: $breakpoint-tablet){
+        grid-template-columns: auto;
+    }
+}
